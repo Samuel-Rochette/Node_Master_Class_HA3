@@ -1,0 +1,38 @@
+<h1>Review</h1>
+<h2 id="orderId"></h2>
+<hr />
+
+<table id="reviewTable">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Amount</th>
+  </tr>
+</table>
+
+<h2 id="totalPrice"></h2>
+
+<div class="formWrapper">
+  <form id="checkout" action="/api/checkout" method="POST">
+    <div class="inputWrapper">
+      <div class="inputLabel">Credit Card #</div>
+      <input type="text" id="number" placeholder="4242424242424242" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Expiry Month</div>
+      <input type="text" id="exp_month" placeholder="MM" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Expiry Year</div>
+      <input type="text" id="exp_year" placeholder="YYYY" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">CVC</div>
+      <input type="text" id="cvc" placeholder="123" />
+    </div>
+  </form>
+</div>
+
+<div id="createOrderCTA" class="ctaWrapper">
+  <a class="cta green" onclick="app.checkout()">Checkout</a>
+</div>
